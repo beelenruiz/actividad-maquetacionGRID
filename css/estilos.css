@@ -1,0 +1,121 @@
+/* Elimina márgenes y rellenos predeterminados de todos los elementos, y aplica box-sizing para que los bordes y el relleno no afecten el tamaño del elemento. */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplica una fuente cursiva, un interlineado de 1.6 y un color de fondo para todos los elementos. */
+* {
+    font-family: "Klee One", cursive;
+    line-height: 1.6;
+    background-color: #e5cdee;
+}
+
+/* Estiliza el encabezado*/
+header {
+    text-align: center;
+    padding: 20px;
+}
+header h1 {
+    font-size: 2rem;
+    color: #301e30;
+    font-weight: bold;
+}
+header p {
+    font-size: 1rem;
+    color: #643f64;
+    font-weight: bold;
+}
+
+/* Estilo para las líneas horizontales (hr), definiendo su ancho y color. */
+hr {
+    width: 100%;
+    border-top: 2px solid #643f64;
+}
+
+/* Estiliza la barra de navegación */
+nav {
+    padding: 10px;
+    margin: 20px;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    margin: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #643f64;
+    font-weight: bold;
+}
+
+/* Configura el diseño de cuadrícula para el contenedor principal*/
+#contenedor {
+    display: grid; /* Utiliza un diseño de cuadrícula para el contenedor principal. */
+    grid-template-columns: 20% 80%; /* Define dos columnas: una del 20% para la navegación y otra del 80% para el contenido principal. */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible. */
+}
+
+/* Define un diseño de cuadrícula para el área principal */
+main {
+    display: grid; /* Utiliza un diseño de cuadrícula para el área principal. */
+    grid-template-rows: auto; /* Establece las filas con altura automática según el contenido. */
+    gap: 20px; /* Establece un espacio entre los elementos. */
+    padding: 20px;
+}
+
+section {
+    display: grid; /* Utiliza un diseño de cuadrícula para las secciones. */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Configura las columnas para que se adapten automáticamente al tamaño de la pantalla, con un ancho mínimo de 200px por columna. */
+    gap: 20px; /* Establece un espacio entre los elementos */
+}
+
+/* Estiliza los contenedores dentro de las secciones, agregando bordes, relleno y redondeo. */
+section div {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #643f64;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* Estiliza las imágenes dentro de los divs, haciendo que se adapten al tamaño y tengan bordes redondeados. */
+section div img {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estiliza los párrafos dentro de los divs de las secciones*/
+section div p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #643f64;
+    font-weight: bold;
+}
+
+/* Estiliza el pie de página*/
+footer {
+    background: #e5cdee;
+    color: #643f64;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    margin: 10px;
+    display: grid; /* Utiliza un diseño de cuadrícula para el pie de página. */
+    grid-template-columns: repeat(3, 1fr); /* Define tres columnas de igual tamaño dentro del pie de página. */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.address, .copi, .social {
+    text-align: center;
+}
+.social a {
+    text-decoration: none;
+    color: #643f64;
+}
